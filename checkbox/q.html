@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment</title>
+    <style media="screen">
+      .myclass{
+        border: 5px solid;
+      }
+      input[type="checkbox"] {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          height: 16px;
+          width: 16px;
+          border: 1px solid black;
+        }
+
+        input[type="checkbox"]:checked {
+          background:#008000;
+        }
+        input[type="checkbox"]:not(:checked){
+          background:#FF0000;
+        }
+    </style>
+    <link rel="" href="q.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  </head>
+  <body>
+    <input id="week_d" type="checkbox" name="" value="">Can't choose weekends <p></p>
+  <input id="mon" type="checkbox" name="" value="">Mon
+    <input id="tues" type="checkbox" name="" value="">Tues
+    <input id="wed" type="checkbox" name="" value="">Wed
+    <input id="thurs" type="checkbox" name="" value="">Thurs
+    <input id="fri" type="checkbox" name="" value="">Fri
+    <input id="sat" type="checkbox" name="" value="">Sat
+    <input id="sun" type="checkbox" name="" value="">Sun
+
+
+    <div class="myclass">
+      <ol id="weekdays_selected">
+
+      </ol>
+
+    </div>
+    <p></p>
+<input id="submit" type="button" name="" value="Submit">
+
+    <script >
+    $("#submit").click(function(){
+
+      var weekdays_selected=[];
+      if($("#week_d").prop("checked")==true){
+      if($("#mon").prop("checked")==true){
+        $("#weekdays_selected").append("<li class='task'><span>Monday</span></li>")  ;
+
+        }
+      if($("#tues").prop("checked")==true){
+  $("#weekdays_selected").append("<li class='task'><span>Tuesday</span></li>")  ;
+  }
+      if($("#wed").prop("checked")==true){
+  $("#weekdays_selected").append("<li class='task'><span>Wednesday</span></li>")  ;         }
+      if($("#thurs").prop("checked")==true){
+  $("#weekdays_selected").append("<li class='task'><span>Thursday</span></li>")  ;       }
+      if($("#fri").prop("checked")==true) {
+  $("#weekdays_selected").append("<li class='task'><span>Friday</span></li>")  ;       }
+      if($("#sat").prop("checked")==true){
+          alert("cant choose weekend");
+             }
+      if($("#sun").prop("checked")==true){
+          alert("can't choose weekend");
+
+        }
+
+  }
+  else {
+    if($("#mon").prop("checked")==true){
+  $("#weekdays_selected").append("<li class='task'><span>Monday</span></li>")  ;
+
+      }
+    if($("#tues").prop("checked")==true){
+  $("#weekdays_selected").append("<li class='task'><span>Tuesday</span></li>")  ;
+}
+    if($("#wed").prop("checked")==true){
+  $("#weekdays_selected").append("<li class='task'><span>Wednesday</span></li>")  ;     }
+    if($("#thurs").prop("checked")==true){
+  $("#weekdays_selected").append("<li class='task'><span>Thursday</span></li>")  ;        }
+    if($("#fri").prop("checked")==true) {
+  $("#weekdays_selected").append("<li class='task'><span>Friday</span></li>")  ;        }
+    if($("#sat").prop("checked")==true){
+  $("#weekdays_selected").append("<li class='task'><span>Saturday</span></li>")  ;           }
+    if($("#sun").prop("checked")==true){
+  $("#weekdays_selected").append("<li class='task'><span>Sunday</span></li>")  ;      }
+
+
+  }
+  });
+    </script>
+  </body>
+</html>

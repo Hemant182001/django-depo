@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Check the Status of Checkboxes</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $("#result").html("Checkbox is checked.");
+            }
+            else if($(this).prop("checked") == false){
+                $("#result").html("Checkbox is unchecked.");
+            }
+        });
+    });
+</script>
+</head>
+<body>
+	<p><input type="checkbox"> Check or uncheck the checkbox to get the status.</p>
+    <div id="result" style="background: yellow;"></div>
+</body>
+</html>
